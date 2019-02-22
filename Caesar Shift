@@ -1,0 +1,39 @@
+/*
+Caesar Shift Cipher
+hack 16 2/22/2019
+*/
+
+#include <iostream>
+#include <string>
+#include <stdlib.h>
+#include <cstdio>
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+	int c, i = 0;
+	int shift = 0;
+	char outtext[100];
+
+	shift = atoi(argv[1]);
+
+	cout << "Enter characters for encryption: " << endl;
+	c = getchar();
+	
+	while ( !cin.eof() )
+	{
+		if (isalpha(c))
+		{
+			c = tolower(c);
+			c = (((c - 97) + shift) % 26) + 97;
+		}
+		outtext[i] = c;
+		cout << outtext[i];
+		i++;
+		c = getchar();
+		
+	}
+	
+	return 0;
+}
