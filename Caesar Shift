@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
 	int c, i = 0;
 	int shift = 0;
-	char outtext[100];
+	string outtext;
 
 	shift = atoi(argv[1]);
 
